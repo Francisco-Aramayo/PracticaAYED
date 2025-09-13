@@ -1,0 +1,23 @@
+a- Cuando queremos realizar un acceso por indice,
+o inserción/eliminación al final
+
+b- En inserciones y eliminaciones en cualquier 
+posicion (no al final) o en uso intensivo de 
+operaciones de tipo queue/deque
+
+c- El arrayList utiliza internamente un arreglo
+contiguo, usa menos memoria porque solo guarda
+el dato. El espacio en memoria depende del tamaño
+
+En la linkedlist cada nodo guarda una referencia al 
+nodo anterior y siguiente por lo que consume mas
+memoria.
+
+d-
+| Situación                                   | Mejor opción   | Motivo                                                        |
+| ------------------------------------------- | -------------- | ------------------------------------------------------------- |
+| Acceso frecuente por índice                 | **ArrayList**  | O(1) acceso por posición                                      |
+| Inserciones/eliminaciones al final          | **ArrayList**  | O(1 amortizado                                                |
+| Inserciones/eliminaciones al inicio o medio | **LinkedList** | O(1) usando iterador                                          |
+| Implementar colas o pilas                   | **LinkedList** | Métodos addFirst, addLast, removeFirst, removeLast eficientes |
+| Memoria limitada y lista grande             | **ArrayList**  | Menor overhead por elemento                                   |
